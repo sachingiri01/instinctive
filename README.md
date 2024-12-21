@@ -1,4 +1,4 @@
-# Student Management System with Filters
+# Student Management System 
 
 This is a **Student Management System** built with **React** and **Tailwind CSS**, integrated with **Supabase** for database management. The system provides functionalities to:
 
