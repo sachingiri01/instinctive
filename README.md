@@ -30,5 +30,5 @@ Before getting started, make sure you have the following installed:
 # To Run the code
 
 - npm run dev --> for frontend
-- npm run dev --> for backend 
+- npm run backend--> for backend 
 - provide the env variable 
