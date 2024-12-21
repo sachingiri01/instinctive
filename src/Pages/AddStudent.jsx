@@ -51,7 +51,7 @@ const AddStudent = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch('http://localhost:3000/add-student', {
+      const response = await fetch('https://instinctive-back.onrender.com/add-student', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
