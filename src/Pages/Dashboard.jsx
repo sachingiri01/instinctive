@@ -73,14 +73,14 @@ function Dashboard() {
             
   }
 
-  const handleFetchStudents = async () => {
+  const handleFetchStudents = async (cohortt) => {
 
     if (!cohortt||cohortt!="Select Year") {
       return;
     }
 
     try {
-      const response = await fetch(`https://instinctive-back.onrender.com/students-by-cohort?cohort=${encodeURIComponent(cohortt)}`, {
+      const response = await fetch(`https://instinctive-back.onrender.com/students-by-cohort?cohort=${cohortt}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -100,25 +100,28 @@ function Dashboard() {
     }
   };
   const handle_search=(e)=>{
+      console.log(e.target.value)
     setsearch_bar(e.target.value);
     await handle_class_fetch(e.target.value)
     
   }
   const handle_cohort=(e)=>{
+      console.log(e.target.value)
       setcohortt(e.target.value)
+       await handleFetchStudents(e.target.value)
       
   }
   useEffect(() => {
-      const handle=async()=>{
-        await handle_class_fetch(search_bar)
-      }
-      handle();
+      // const handle=async()=>{
+        // await handle_class_fetch(search_bar)
+      // }
+      // handle();
   }, [search_bar])
 
   useEffect(() => {
-    const handle=async()=>{
-      await handleFetchStudents()
-    }
+    // const handle=async()=>{
+      // await handleFetchStudents()
+    // }
     handle();
 }, [cohortt])
 
