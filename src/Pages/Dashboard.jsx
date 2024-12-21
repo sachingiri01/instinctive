@@ -19,7 +19,7 @@ function Dashboard() {
   const get_data = async (e) => {
   
     try {
-      const response = await fetch('http://localhost:3000/students', {
+      const response = await fetch('https://instinctive-back.onrender.com/students', {
         method: 'Get',
         headers: {
           'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ function Dashboard() {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/students-by-course?course=${course}`, {
+      const response = await fetch(`https://instinctive-back.onrender.com/students-by-course?course=${course}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ function Dashboard() {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/students-by-cohort?cohort=${encodeURIComponent(cohortt)}`, {
+      const response = await fetch(`https://instinctive-back.onrender.com/students-by-cohort?cohort=${encodeURIComponent(cohortt)}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
