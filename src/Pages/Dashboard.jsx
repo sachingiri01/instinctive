@@ -99,13 +99,13 @@ function Dashboard() {
       console.error('Error:', err);
     }
   };
-  const handle_search=(e)=>{
+  const handle_search=async(e)=>{
       console.log(e.target.value)
     setsearch_bar(e.target.value);
     await handle_class_fetch(e.target.value)
     
   }
-  const handle_cohort=(e)=>{
+  const handle_cohort=async(e)=>{
       console.log(e.target.value)
       setcohortt(e.target.value)
        await handleFetchStudents(e.target.value)
