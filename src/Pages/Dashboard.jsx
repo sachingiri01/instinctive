@@ -101,6 +101,7 @@ function Dashboard() {
   };
   const handle_search=(e)=>{
     setsearch_bar(e.target.value);
+    await handle_class_fetch(e.target.value)
     
   }
   const handle_cohort=(e)=>{
