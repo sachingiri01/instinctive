@@ -122,7 +122,7 @@ function Dashboard() {
 }, [cohortt])
 
   return (
-    <div className="flex max-h-screen  bg-slate-100">
+    <div className="flex h-screen  bg-slate-200">
       <Sidebar/>
 
       <div className="flex flex-col overflow-y-auto bg-slate-200  flex-1 p-6">
